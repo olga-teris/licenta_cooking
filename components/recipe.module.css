@@ -1,0 +1,29 @@
+.recipe {
+    margin: 10px;
+    background-color: #f2f2f2;
+    /* border: solid; */
+    /* color: red; */
+    display: grid;
+    grid-template-columns: 250px auto;
+    box-shadow: 2px 6px 4px  #78939b;
+    
+}
+
+.picture {
+    grid-column: 1;
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    margin: 10px;
+    box-shadow: 2px 6px 4px  #78939b;
+}
+
+.info {
+    grid-column: 2;
+    background-color: #f2f2f2;
+}
+
+.info_title {
+    color: black;
+    margin-left: 30px;
+}

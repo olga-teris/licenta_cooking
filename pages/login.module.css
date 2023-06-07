@@ -1,0 +1,36 @@
+.container {
+    background-color: #97cbda;
+    
+    height: 700px;
+}
+
+.login_img {
+    z-index: 2;
+    background-image: url("/images/food.jpg");
+    margin: auto;
+    
+    width: 600px;
+    height: 700px;
+
+    box-shadow: 2px 4px 6px  #2b6777;
+}
+
+.login_wrap {
+    background-color: rgba(174, 205, 235, 0.7);
+    width: 600px;
+    height: 700px;
+    padding: 75px;
+}
+
+.login_form {
+    border-radius: 1%;
+    background-color: white;
+    width: 450px;
+    height: 500px;
+    padding: 20%;
+    
+}
+
+.tab {
+    background-color: red;
+}
