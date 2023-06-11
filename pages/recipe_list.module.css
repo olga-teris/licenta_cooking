@@ -4,34 +4,30 @@
     background-color: #91cbdb;
     box-shadow: 2px 6px 4px  #78939b;
     overflow: hidden;  
+    background-image: url("/images/profile_bg.jpg");
 }
 
-.img {
-    /* margin: 5px; */
-    /* object-fit: contain; */
-    /* height: 200px; */
-    /* overflow: hidden; */
-}
 
 .container {
     margin-top: 5px;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 267px auto;
 }
 
 .categories {
     grid-column: 1;
     margin: 2px;
-    background-color: #91cbdb;
+    background-color: #c0dae2;
 }
 
 .recipe_list {
     grid-column: 2;
     margin: 2px;;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 .list_container {
-    background-color: #91cbdb;
+    padding: 10px;
+    background-color: #9db5bb;
     display: grid;
 }

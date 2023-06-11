@@ -1,0 +1,36 @@
+.card {
+    min-width: 150px;
+    min-height: 80px;
+    background-color: rgb(251, 204, 212);
+    /* border: solid; */
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    box-shadow: 2px 3px 6px rgb(166, 164, 152);
+}
+
+.ing_name {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.ing_button {
+    background-color: #e37281;
+    color: #192e34;
+    font-size: 16px;
+    border-radius: 20%;
+
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 2rem;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.ing_button:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) 
+}

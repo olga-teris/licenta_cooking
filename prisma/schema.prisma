@@ -10,9 +10,57 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model users {
-  userId        Int         @id @default(autoincrement())
-  username      String     
+model user {
+  id            Int         @id @default(autoincrement())
+  name          String     
   email         String     
-  password      String      
+  password      String 
+  fridge        fridge[]     
+}
+
+model ingredient {
+  id                Int     @id @default(autoincrement())
+  name              String
+  fridge            fridge[]
+  recipeIng         recipeIng[]
+}
+
+model fridge {
+  users             user         @relation(fields: [userId], references: [id])
+  userId            Int
+  ingredients       ingredient   @relation(fields: [ingredientId], references: [id])
+  ingredientId      Int
+
+  @@unique([userId, ingredientId])
+}
+
+model recipe {
+  id            Int        @id @default(autoincrement())
+  name          String
+  recipeIng     recipeIng[]
+  recipeCat     recipeCat[]
+}
+
+model category {
+  id            Int        @id @default(autoincrement())
+  name          String
+  recipeCat     recipeCat[]
+}
+
+model recipeIng {
+  recipeId        Int
+  ingredientId    Int
+  recipes         recipe          @relation(fields: [recipeId], references: [id])
+  ingredients     ingredient      @relation(fields: [ingredientId], references: [id])
+
+  @@unique([recipeId, ingredientId])
+}
+
+model recipeCat {
+  recipeId        Int
+  categoryId      Int
+  recipes         recipe          @relation(fields: [recipeId], references: [id])
+  categories      category        @relation(fields: [categoryId], references: [id])
+
+  @@unique([recipeId, categoryId])
 }

@@ -1,0 +1,101 @@
+.container {
+    background-color: #c0dde4;
+    min-height: 700px;
+    padding: 20px;
+}
+
+.bio_wrap {
+    background-color: rgb(252, 249, 236);
+    margin: 15px;
+    height: 250px;
+    padding: 15px;
+    box-shadow: 2px 6px 6px rgb(166, 164, 152);
+    /* background-image: url("/images/profile_bg.jpg"); */
+}
+
+.user_pfp {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+}
+.user_hello {
+    text-align: center;
+}
+
+.icon_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    width:25px;
+    height: 25px;
+    /* margin-left: 40%; */
+    display: inline;
+    margin-right: 10px;
+}
+.icon_text {
+    display: inline;
+    font-size: 18px;
+    font-style: italic;
+    color: rgb(113, 112, 103);
+    padding: 5px;
+    
+}
+
+
+
+.personalize_wrap {
+    background-color: rgb(252, 249, 236);
+    margin: 15px;
+    height: 250px;
+    box-shadow: 2px 3px 3px rgb(166, 164, 152);
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    
+    
+}
+
+.personalize_item{
+    /* background-color: rgb(169, 133, 204);
+    border: solid; */
+    place-self: stretch;
+    display: grid;
+   
+}
+
+.personalize_icon{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    outline: solid;
+    outline-color: #c0dde4;
+    box-shadow: 5px 4px 5px rgb(166, 164, 152);
+    place-self: center;
+}
+
+.icon_text2 {
+    /* background-color: red; */
+    padding: 7%;
+    font-size: 22px;
+    font-style: italic;
+    color: rgb(113, 112, 103);
+    text-align: center;
+    
+}
+
+.icon_text2:hover {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.info_wrap {
+    background-color: rgb(252, 249, 236);
+    margin: 15px;
+    min-height: 250px;
+    box-shadow: 2px 3px 6px rgb(166, 164, 152);
+}

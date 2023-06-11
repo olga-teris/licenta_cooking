@@ -15,7 +15,7 @@ export default function RecipeList ({allRecipeInfo}) {
 
     return (<>
         <div className={styles.general_info}>
-            <img src="/images/recipes_general.jpg" className={styles.img}></img>
+            {/* <img src="/images/profile_bg.jpg" className={styles.img}></img> */}
         </div>
         <div className={styles.container}>
             <div className={styles.categories}>

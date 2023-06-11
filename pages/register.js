@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 
 export default function Register(){
 
-    const [username, setUsername] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -31,7 +31,7 @@ export default function Register(){
     async function handleSubmit(event){
         event.preventDefault();
         const values = {
-            username: username,
+            name: name,
             email: email,
             password: password
         }
@@ -65,7 +65,7 @@ export default function Register(){
 
             <form onSubmit={handleSubmit}>
                 <label>
-                    Username: <input type='text' value={username} onChange={(e) => setUsername(e.target.value)} />
+                    Username: <input type='text' value={name} onChange={(e) => setName(e.target.value)} />
                 </label>
                 
                 <label>

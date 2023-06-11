@@ -1,16 +1,17 @@
 
 import { PrismaClient } from "prisma/prisma-client";
 import { hash } from 'bcryptjs';
+import prisma from "../../../lib/prisma";
 
 export default async function handler(req, res){
     
-    const prisma = new PrismaClient();
+    // const prisma = new PrismaClient();
 
     // only post method is accepted
     if(req.method === 'POST'){
 
         if(!req.body) return res.status(404).json({ error: "Don't have form data...!"});
-        const { username, email, password } = req.body;
+        const { name, email, password } = req.body;
 
         // check duplicate users
         // const checkexisting = await Users.findOne({ email });
@@ -25,9 +26,9 @@ export default async function handler(req, res){
         {
             const hashedpass = await hash(password, 0);
             // console.log(hash);
-            const a = await prisma.users.create({
+            const a = await prisma.user.create({
                 data: {
-                    username: username,
+                    name: name,
                     email: email,
                     password: hashedpass
                 }
@@ -36,7 +37,7 @@ export default async function handler(req, res){
             // console.log("****",res.status(200).end())
             // return res.status(200).end();
             
-            return res.status(201).json({ status : true, user: a.userId})
+            return res.status(201).json({ status : true, user: a.id})
         }
         catch (err)
         {

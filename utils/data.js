@@ -34,6 +34,17 @@ export const navLinks = [
     },
   ];
 
+  export const loggedUserLinks = [
+    {
+        name: "My Profile",
+        path: "/profile",
+    },
+    {
+        name: "LOG OUT",
+        path: "/logout",
+    },
+  ];
+
   export const footerLinks = [
     {   
         name: "About Us", 
