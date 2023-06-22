@@ -42,7 +42,7 @@ export default function Recommendations(props) {
         setLoading(true)
         const result = await getRecipes()
         setFilteredRecipes(result.recipesInfo)
-        console.log(result.recipesInfo)
+        // console.log(result.recipesInfo)
         setLoading(false)
     }
 
@@ -111,17 +111,14 @@ export default function Recommendations(props) {
                 <div className={styles.separator}/>
 
                 <div className={styles.results}>
-                    {loading 
-                    ? <div></div> 
-                    : filteredRecipes.map((recipe) => {
-                        return (
-                            <div key={recipe.id}>
-                            <Recipe  recipeInfo={recipe}>-------</Recipe>
-                            </div>
-                        )
-                    } )
+                    {(loading) ? <div>Loading . . .</div> 
+                    : (filteredRecipes.length === 0) ? <p> 0 results </p>
+                        : filteredRecipes.map((recipe) => { 
+                                    return <div key={recipe.id}>
+                                            <Recipe  recipeInfo={recipe}></Recipe>
+                                        </div>
+                                })
                     }
-
                 </div>
             </div>
         </div>

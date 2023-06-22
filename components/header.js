@@ -2,10 +2,22 @@ import { navLinks, userLinks, loggedUserLinks } from "../utils/data";
 import Link from "next/link";
 import styles from "./header.module.css";
 import {useSession} from "next-auth/react"
+import { signOut } from "next-auth/react";
 
 export default function Header(props) {
     const { data: session } = useSession()
     // const { data: session } = props.session
+
+    // async function handleLogOut() {
+    //     const status = await signIn('credentials', {
+    //         redirect: false,
+    //         email: values.email ,
+    //         password: values.password,
+    //         callbackUrl: "/"
+    //     })
+
+    //     if(status.ok) router.push(status.url)
+    // }
 
     return (
         <div>
@@ -62,15 +74,13 @@ export default function Header(props) {
                         })}
                 </div>
                 <div className={styles.navbar_right}>
-                    {loggedUserLinks.map((link, index) => {
-                        return (
-                                <div key = {index}>
-                                    <Link className={styles.user_linkstyle} href={link.path}>
-                                        {link.name}
-                                    </Link>
-                                </div>
-                            )
-                        })}
+
+                    <Link className={styles.user_linkstyle} href={loggedUserLinks[0].path}>
+                        {loggedUserLinks[0].name}
+                    </Link>
+                    <button className={styles.user_linkstyle} onClick={() => signOut({ callbackUrl: '/' })}>
+                        {loggedUserLinks[1].name}
+                    </button>
                 </div>
             </nav>
         </header>

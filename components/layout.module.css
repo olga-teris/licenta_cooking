@@ -1,0 +1,14 @@
+.container {
+    
+    display: grid;
+    justify-items: center;
+    background-color: #dfe8f3;
+    grid-template-columns: auto auto auto;
+    
+}
+.center {
+    min-width: 1200px;
+    max-width: 1200px;
+    /* box-shadow: 2px 2px 2px gray; */
+    box-shadow: 5px 0 5px -4px rgba(79, 109, 146, 0.8), -5px 0 5px -4px rgba(76, 97, 122, 0.8);
+}

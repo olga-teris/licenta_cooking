@@ -36,13 +36,9 @@ A healthy dose of cumin plus a good amount of onion and leek keeps things intere
 ## Instructions
 
 1. Heat the oil and melt the butter in a large heavy based pot over medium heat. Cook the onion, leek and garlic for 5 minutes until softened.
-
 2. Add the sweet potato and cumin, cook for another 3 minutes, stirring regularly.
-
 3. Simmer 20 minutes – Add the stock, salt and pepper. Bring to a simmer, then cook for 20 minutes at a gentle simmer until the sweet potato is very tender (no lid).
-
 4. Remove the pot from the stove. Blitz with a hand-held stick until smooth. (Note 4 for blender) Stir in cream.
-
 5. Ladle into bowls. Drizzle with yogurt, cream or olive oil with a sprinkle of something crunchy – pictured with pistachios and crispy flatbread strips (Note 3).
 
 

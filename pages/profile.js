@@ -6,6 +6,9 @@ import { useState } from "react"
 import { authOptions } from "../pages/api/auth/[...nextauth]" 
 import { getServerSession } from "next-auth";
 import Fridge from "../components/fridge"
+import Preferences from "../components/preferences"
+import Contraindications from "../components/contraindications"
+import ProfileDefault from "../components/profileDefault"
 
     
 
@@ -18,13 +21,11 @@ export default   function Profile(props){
             case 'fridge':
                 return  <Fridge fridgeContent = {props.fridgeContent} otherIng={props.otherIng}/>
             case 'preferences':
-                return 'PPPPPPPP'
+                return <Preferences  allIng = {props.allIng} liked = {props.likedIng} disliked={props.dislikedIng} />
             case 'contraindications':
-                return 'CCCCC'
-            case 'others':
-                return 'OTHERSSSS'
+                return <Contraindications myContr = {props.myContr} otherContr = {props.otherContr} />
             default:
-                return 'OOOOOOOOOOOOOO'
+                return <ProfileDefault/>
         }
     }
     
@@ -69,7 +70,6 @@ export default   function Profile(props){
                 </div>
                 <div className={styles.personalize_item}>
                     <img src="/images/others.png" className={styles.personalize_icon}></img>
-                    {/* <p className={styles.icon_text2} onClick={() => setProfileInfo('others')}>Recommendations</p> */}
                     <Link className={styles.icon_text2} href={'/recommendations'}>Recommendations</Link>
                 </div>
             </div>
@@ -96,6 +96,8 @@ export async function getServerSideProps(context){
     }
 
     let userId = session.user.id
+
+    //data for FRIDGE component
     const options = {
         method: "POST",
         headers : { 'Content-Type': 'application/json'},
@@ -129,7 +131,96 @@ export async function getServerSideProps(context){
     }
     const otherIng = await getOtherIng()
 
+
+    //data for CONTRAINDICATIONS component
+    const opt1 = {
+        method: "POST",
+        headers : { 'Content-Type': 'application/json'},
+        body: JSON.stringify({id: userId, others: 'no'})
+    }
+    async function getContrContent(){
+        let r = await fetch('http://localhost:3000/api/profile', opt1)
+            .then(res =>  res.text())
+            .then((data) => {
+                const x =  Promise.resolve(data ? JSON.parse(data) : {})
+                return x
+        })
+        return r.contrData
+    }
+    const myContr = await getContrContent()
+    
+    const contrIngIds= myContr.map(e => e.id)
+    const opt2 = {
+        method: "POST",
+        headers : { 'Content-Type': 'application/json'},
+        body: JSON.stringify({id: userId, others: 'yes', ingIds: contrIngIds})
+    }
+    async function getOtherContrIng(){
+        let r = await fetch('http://localhost:3000/api/profile', opt2)
+            .then(res =>  res.text())
+            .then((data) => {
+                const x =  Promise.resolve(data ? JSON.parse(data) : {})
+                return x
+        })
+        return r.contrData
+    }
+    const otherContr = await getOtherContrIng()
+
+
+    //data for PREFERENCES component
+    const p1 =  {
+        method: "POST",
+        headers : { 'Content-Type': 'application/json'},
+        body: JSON.stringify({id: userId, others: 'all'})
+    }
+
+    const p2 =  {
+        method: "POST",
+        headers : { 'Content-Type': 'application/json'},
+        body: JSON.stringify({id: userId, others: 'like'})
+    }
+
+    const p3 =  {
+        method: "POST",
+        headers : { 'Content-Type': 'application/json'},
+        body: JSON.stringify({id: userId, others: 'dislike'})
+    }
+
+    async function getAllIng(){
+        let r = await fetch('http://localhost:3000/api/preferences', p1)
+            .then(res =>  res.text())
+            .then((data) => {
+                const x =  Promise.resolve(data ? JSON.parse(data) : {})
+                return x
+        })
+        return r.prefData
+    }
+
+    async function getLikedIng(){
+        let r = await fetch('http://localhost:3000/api/preferences', p2)
+            .then(res =>  res.text())
+            .then((data) => {
+                const x =  Promise.resolve(data ? JSON.parse(data) : {})
+                return x
+        })
+        return r.prefData
+    }
+
+    async function getDislikedIng(){
+        let r = await fetch('http://localhost:3000/api/preferences', p3)
+            .then(res =>  res.text())
+            .then((data) => {
+                const x =  Promise.resolve(data ? JSON.parse(data) : {})
+                return x
+        })
+        return r.prefData
+    }
+
+    const allIng = await getAllIng()
+    const likedIng = await getLikedIng()
+    const dislikedIng = await getDislikedIng()
+
     return {
-      props: { session, fridgeContent, otherIng}
+      props: { session, fridgeContent, otherIng, myContr, otherContr, allIng, dislikedIng, likedIng}
     }
   }

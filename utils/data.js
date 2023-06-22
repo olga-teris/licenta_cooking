@@ -29,7 +29,7 @@ export const navLinks = [
         path: "/login",
     },
     {
-        name: "GET STARTED",
+        name: "REGISTER",
         path: "/register",
     },
   ];

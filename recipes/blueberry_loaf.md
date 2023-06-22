@@ -40,21 +40,13 @@ Make this with any fruit you want – fresh, frozen or even dried!
 ## Instructions
 
 1. Preheat oven to 200°C/390°F (180°C fan forced).
-
 2. Line loaf pan: Butter and line a loaf pan with parchment / baking paper. The picture pan is 21 x 11 x 7 cm (8.3 x 4.5 x 2.75") which makes a nice tall loaf.
-
 3. Coat blueberries: Toss blueberries in flour (less flour sticks if dry, more if frozen). This helps keep them suspended in the batter.
-
 4. Whisk Dry ingredients in a bowl.
-
 5. Add Wet ingredinets: Make a well in the Dry ingredients. Add Wet ingredients. Whisk until incorporated.
-
 6. Fold in blueberries: Fold in blueberries, including any flour remaining in the blueberry bowl.
-
 7. Bake: Pour into the prepared tin. Bake for 50 minutes, then cover with foil. Bake for a further 15 – 25 minutes, or until a skewer comes out clean. Check after 15 minutes, then if the skewer comes out with batter on it, bake a further 10 minutes.
-
 8. Cool: Rest for 5 minutes then turn onto a cooling rack and completely cool. Drizzle with Glaze. Wait until the glaze sets (about 20 minutes) before slicing to serve.
-
 9. Whisk icing sugar and lemon until smooth, using milk only if needed to achieve the right thickness (Note 3). Pour or spread over cake set on a rack over a baking tray. Scrape glaze drippings on the tray back onto the cake.
 
 

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import { signIn, signOut } from "next-auth/react"
 import { useFormik } from 'formik';
-import login_validate from '../lib/validate';
+import { login_validate } from '../lib/validate';
 import { useRouter } from 'next/router';
 import styles from './login.module.css'
 
@@ -19,8 +19,8 @@ export default function Login(){
             email: '',
             password: ''
         },
-        // validate : login_validate,
-        validate: () => ({}),
+        validate : login_validate,
+        // validate: () => ({}),
         onSubmit : xsubmit
     })
 
@@ -34,6 +34,7 @@ export default function Login(){
                 })
 
         if(status.ok) router.push(status.url)
+        else formik.errors.password = "Account doesn't exist"
     }
 
     return (
@@ -45,29 +46,32 @@ export default function Login(){
         <div className={styles.container}>
             <div className={styles.login_img}>
                 <div className={styles.login_wrap}>
-                    <form className={styles.login_form} onSubmit={formik.handleSubmit} >
-                        <h1>Login</h1>
+                    <form method="post" className={styles.login_form} onSubmit={formik.handleSubmit} >
+                        <img src="/images/user_img.png" className={styles.user_pfp}></img> 
+                        <h1 className={styles.login_header}>Login</h1>
                         <input 
+                            className={styles.input_tab}
                             type="email"
                             name='email'
                             placeholder='Email'
                             {...formik.getFieldProps('email')}
                         />
-                        <p className='error'>{formik.errors.email && formik.touched.email}</p>
+                        <p className={styles.login_error}>{formik.errors.email && formik.touched.email ? formik.errors.email : ''}</p>
                         <input 
+                            className={styles.input_tab}
                             type={`${show ? "text" : "password"}`}
                             name='password'
                             placeholder='Password'
                             {...formik.getFieldProps('password')}
                         />
-                        <p className='error'>{formik.errors.password && formik.touched.password}</p>
+                        <p className={styles.login_error}>{formik.errors.password && formik.touched.password ? formik.errors.password : ''}</p>
                         <div className="input-button">
-                            <button type='submit'>
+                            <button className={styles.login_button} type='submit'>
                                 Login
                             </button>
                         </div>
-                        <p className='text-center text-gray-400 '>
-                            Don't have an account yet? <Link href={'/register'}>Sign Up</Link>
+                        <p className={styles.login_bottom}>
+                            Don't have an account yet? <Link className={styles.have_acc} href={'/register'}>Sign Up</Link>
                         </p>
                     </form>
                 </div>

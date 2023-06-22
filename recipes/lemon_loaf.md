@@ -38,13 +38,9 @@ Glazed lemon loaf is what you make when you’re after something not too sweet t
 ## Instructions
 
 1. Preheat oven to 180°C/350°F (160°C fan-forced). Grease then line a 21 x 11 x 7 cm (8.5 x 4.5 x 2.75") with baking / parchment paper. (Note 4)
-
 2. Batter – Whisk Dry ingredients in a large bowl. Whisk Wet ingredients in a separate bowl. Pour Wet ingredients into the Dry ingredients. Whisk just until lump free. Pour into the prepared loaf pan then smooth the surface.
-
 3. Bake 45 minutes uncovered. Loosely cover with foil then bake a further 20 minutes or until a skewer inserted comes out clean.
-
 4. Cool & glaze – Stand 10 min in pan then turn out onto a cooling rack. Fully cool before glazing (~3 hours). Use a spoon to spread and coax lovely glaze drips down the side! Cut thick slices and serve.
-
 5. Glaze – Whisk ingredients until combined and smooth, a thick smooth frosting that will drip thickly, not be transparent. Start with 3 1/2 teaspoons lemon juice, and add 1/2 tsp extra, as needed. (Note 5 on thickness)
 
 

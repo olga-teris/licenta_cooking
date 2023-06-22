@@ -1,0 +1,46 @@
+.container {
+    /* background-color: pink; */
+    /* height: 600px; */
+    padding: 20px;
+}
+
+.fridge_title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.button_container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.fridge_button {
+    background-color: #c8d8e4;
+    color: #2b6777;
+    font-size: 18px;
+    border-radius: 20%;
+
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 2rem;
+    margin: 5px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fridge_button:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) 
+}
+
+.ing_container {
+    /* background-color: aqua; */
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 25px;
+    justify-content: center;
+}

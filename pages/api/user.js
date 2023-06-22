@@ -12,7 +12,7 @@ export default async function handler(req, res){
         if (others === 'no') {
             try
             {
-                const result = await prisma.$queryRaw`SELECT id, name FROM ingredient JOIN fridge as f ON id=f.ingredientId WHERE f.userId=${id}`
+                const result = await prisma.$queryRaw`SELECT id, name FROM ingredient JOIN fridge as f ON id=f.ingredientId WHERE f.userId=${id} ORDER BY name`
                 // console.log("api fridge content  ", result)
                 return res.status(201).json({ status : true, fridgeData: result})
             }
@@ -25,8 +25,8 @@ export default async function handler(req, res){
             {  
                 const { ingIds } = req.body
                 const result = ingIds.length === 0
-                    ? await prisma.$queryRaw`SELECT id, name FROM ingredient`
-                    : await prisma.$queryRaw`SELECT id, name FROM ingredient WHERE id NOT IN (${Prisma.join(ingIds)});`
+                    ? await prisma.$queryRaw`SELECT id, name FROM ingredient ORDER BY name`
+                    : await prisma.$queryRaw`SELECT id, name FROM ingredient WHERE id NOT IN (${Prisma.join(ingIds)}) ORDER BY name`
 
                 return res.status(201).json({ status : true, fridgeData: result})
             }
@@ -34,7 +34,7 @@ export default async function handler(req, res){
             {
                 return res.status(503).json({err: err.toString()});
             }
-        } else if (others === 'update'){
+        } else if (others === 'update-fridge'){
             try
             {  
                 const { toAdd, toRemove } = req.body 

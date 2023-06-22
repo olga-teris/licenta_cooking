@@ -5,7 +5,7 @@
 }
 
 .bio_wrap {
-    background-color: rgb(252, 249, 236);
+    background-color: #dfe8f3;
     margin: 15px;
     height: 200px;
     padding: 15px;
@@ -20,6 +20,7 @@
     height: 110px;
     display: block;
     margin: auto;
+    border-radius: 50%;
 }
 
 .user_hello {
@@ -151,5 +152,6 @@
     min-height: 200px;
     margin-top: 20px;
     box-shadow: 2px 6px 6px rgb(166, 164, 152);
+    
 
 }

@@ -5,24 +5,32 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
 model user {
-  id            Int         @id @default(autoincrement())
-  name          String     
-  email         String     
-  password      String 
-  fridge        fridge[]     
+  id                  Int         @id @default(autoincrement())
+  name                String     
+  email               String     
+  password            String 
+  fridge              fridge[]
+  preferences         preferences[] 
+  contraindications   contraindications[]    
 }
 
 model ingredient {
-  id                Int     @id @default(autoincrement())
-  name              String
-  fridge            fridge[]
-  recipeIng         recipeIng[]
+  id                  Int     @id @default(autoincrement())
+  name                String
+  fridge              fridge[]
+  recipeIng           recipeIng[]
+  preferences         preferences[]
+  contraindications   contraindications[] 
 }
 
 model fridge {
@@ -63,4 +71,23 @@ model recipeCat {
   categories      category        @relation(fields: [categoryId], references: [id])
 
   @@unique([recipeId, categoryId])
+}
+
+model preferences {
+  users             user         @relation(fields: [userId], references: [id])
+  userId            Int
+  ingredients       ingredient   @relation(fields: [ingredientId], references: [id])
+  ingredientId      Int
+  liked              Boolean
+
+  @@unique([userId, ingredientId], name: "pref")
+}
+
+model contraindications {
+  users             user         @relation(fields: [userId], references: [id])
+  userId            Int
+  ingredients       ingredient   @relation(fields: [ingredientId], references: [id])
+  ingredientId      Int
+
+  @@unique([userId, ingredientId], name: "contr")
 }

@@ -1,29 +1,53 @@
 .recipe {
     margin: 10px;
-    background-color: #f2f2f2;
-    /* border: solid; */
-    /* color: red; */
+    background-color: white;
+
     display: grid;
-    grid-template-columns: 250px auto;
-    box-shadow: 2px 6px 4px  #78939b;
-    
+    grid-template-columns: 300px auto ;
+    box-shadow: 2px 2px 2px  #c7d3d6;
+    border-bottom: 1px solid black;
+    padding-right: 30px;
 }
 
 .picture {
     grid-column: 1;
-    height: 200px;
-    width: 200px;
-    border-radius: 20%;
+    height: 300px;
+    width: 300px;
+
     margin: 10px;
-    box-shadow: 2px 6px 4px  #78939b;
+    box-shadow: 2px 4px 2px  #c1cfd4;
+    object-fit: cover;
 }
 
 .info {
+    margin: 10%;
     grid-column: 2;
-    background-color: #f2f2f2;
+    background-color: white;
 }
 
 .info_title {
     color: black;
-    margin-left: 30px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 10px;
+    border-bottom: 2px solid #aaa;
+}
+
+.detail_name {
+    padding: 4px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    margin-left: 5%;
+ 
+    
+}
+
+.detail_info {
+    margin: 15px;
+    color: #625858;
+    font-weight: 500;
+    display: inline;
 }

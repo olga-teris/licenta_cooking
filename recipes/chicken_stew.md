@@ -40,27 +40,16 @@ Ultra tender flesh and super crispy skin smothered in a thick savoury sauce with
 ## Instructions
 
 1. Preheat oven to 180C/350F.
-
 2. Heat oil in a large pot over high heat. Brown chicken on both sides until light golden, sprinkling with salt and pepper. Remove from pot. (Do in 2 batches if pot not big enough).
-
 3. If there's too much oil in the pot, discard some. Add onion and garlic. Cook for 2 minutes until onion is translucent.
-
 4. Add carrots and celery, cook for 1 minute.
-
 5. Add wine. Stir, scraping the bottom of the pan to dissolve the brown bits into the liquid. Cook for 1 minute until liquid is mostly gone.
-
 6. Sprinkle flour across surface, stir.
-
 7. Add broth, tomato paste, Worcestershire sauce, thyme and bay leaves. Stir to dissolve tomato paste.
-
 8. Place chicken on top, keeping the skin above the liquid level as much as you can.
-
 9. Bring to simmer then cover. Bake for 45 minutes.
-
 10. Remove from oven, remove lid. Add potatoes, pushing them into the liquid and rearranging chicken so they sit on top (for lovely crispy skin).
-
 11. Return to oven without the lid for a further 40 minutes until the chicken skin is deep golden and super crispy, the potatoes are soft and the sauce is thickened.
-
 12. Taste sauce and adjust salt and pepper to taste.
 
 

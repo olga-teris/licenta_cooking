@@ -41,27 +41,16 @@ Beef Stew calls for simple ingredients, but it’s a stunner! With meltingly ten
 ## Instructions
 
 1. Sprinkle beef with salt and pepper.
-
 2. Heat 1 1/2 tbsp oil in a large, heavy based casserole pot over high heat until just starting to smoke.
-
 3. Add 1/3 of the beef and brown aggressively all over - about 4 minutes. Remove to bowl, repeat with remaining beef, adding more oil if required.
-
 4. Turn down heat to medium high. Add 1 tbsp oil if required. Add onion and garlic, cook for 2 minutes until onion is softened slightly and golden on the edge.
-
 5. Add carrot and celery, stir for 1 minute to coat in flavours.
-
 6. Sprinkle flour evenly across surface, then stir to coat.
-
 7. Add broth, red wine, tomato paste and Worcestershire sauce. Stir to dissolve tomato paste and flour into liquid.
-
 8. Add cooked beef (including any juices), thyme, bay leaf and potato. Stir. Water level should almost fully cover everything (see video), if not, add a touch of water.
-
 9. Bring to simmer, then adjust heat to low / medium low so it's simmering gently. (Note 3 for other cooking methods)
-
 10. Cover and cook for 1 hour 45 minutes or until beef is pretty tender (check with 2 forks at 1.5 hrs).
-
 11. Remove lid and simmer for further 30 minutes or until sauce reduces slightly. It should be like a thin gravy (see video) and beef should now be very tender.
-
 12. Season to taste with salt and pepper. 
 
 

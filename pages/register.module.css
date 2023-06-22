@@ -1,0 +1,103 @@
+.container {
+    background-color: #97cbda;
+    
+    height: 720px;
+}
+
+.register_img {
+    z-index: 2;
+    background-image: url("/images/food.jpg");
+    margin: auto;
+    
+    width: 600px;
+    height: 720px;
+
+    box-shadow: 2px 4px 6px  #2b6777;
+}
+
+.register_wrap {
+    background-color: rgba(174, 205, 235, 0.7);
+    width: 600px;
+    height: 720px;
+    padding: 12%;
+}
+
+.register_form {
+    border-radius: 1%;
+    background-color: rgb(246, 239, 239);
+    width: 450px;
+    min-height: 570px;
+    padding: 25px;
+    
+}
+
+.user_pfp {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.register_header {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input_tab {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border:  ridge;
+    margin-top: 15px;
+    height: 40px;
+    width: 300px;
+    font-size: 18px;
+    background-color: rgb(227, 217, 217);
+}
+
+.register_button {
+    background-color: #2b6777;
+    color: #d4dee1;
+    font-size: 18px;
+    border-radius: 20%;
+
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 2rem;
+    
+    padding: 0.7rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    margin-top:10px;
+    width: 120px;
+}
+
+.register_button:hover{
+    cursor: pointer;
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) 
+}
+
+.register_bottom{
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    color:#324044;
+}
+
+.no_acc{
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f262d;
+}
+
+.register_error {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(255, 20, 20);
+}

@@ -1,0 +1,163 @@
+.container {
+    padding: 20px;
+}
+
+.pref_title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.pref_container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    
+}
+
+.pref_icon {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.like {
+    /* border: solid; */
+    grid-column: 1;
+}
+
+.dislike {
+    /* border: solid; */
+    grid-column: 2;
+}
+
+.pref_list {
+   
+    background-color: rgb(252, 249, 236);
+}
+
+.list_container {
+    padding: 10px;
+    background-color: #c8d8e4;
+    box-shadow: 2px 6px 4px  #78939b;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+.list_container li:hover{
+    font-weight: 700;
+    cursor: pointer;
+}
+.list_container2 li:hover{
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.list_container2 {
+    
+    padding: 10px;
+    background-color: #f47070;
+    box-shadow: 2px 6px 4px  #78939b;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+.pref_select{
+    margin-top: 15px;
+    border-top: 1px solid gray;
+    
+    background-color: rgb(252, 249, 236);
+}
+
+.select_title{
+    
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.pref_select select {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #c8d8e4;
+    border: none;
+    /* display: none; */
+}
+
+.pref_select2{
+    margin-top: 15px;
+    border-top: 1px solid gray;
+    
+    background-color: rgb(252, 249, 236);
+}
+
+.pref_select2 select {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #f47070;
+    border: none;
+    /* display: none; */
+}
+
+
+.add_button {
+    background-color: #c8d8e4;
+    color: #2b6777;
+    font-size: 18px;
+    border-radius: 20%;
+
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 2rem;
+    margin: 5px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.add_button:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) 
+}
+
+.add_button2 {
+    background-color: #f47070;
+    color: #4a2326;
+    font-size: 18px;
+    border-radius: 20%;
+
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 2rem;
+    margin: 5px;
+    padding: 0.7rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.add_button2:hover {
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) 
+}
+

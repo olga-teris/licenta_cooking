@@ -12,9 +12,21 @@ export default function Recipe( { recipeInfo } ) {
                     <Link href={"/recipes/" + recipeInfo.id}>
                         <h1 className={styles.info_title}>{recipeInfo.title}</h1>
                     </Link>
-                    <div>Servings {recipeInfo.servings}</div>
-                    <div>Prep {recipeInfo.prep}</div>
-                    <div>Cook {recipeInfo.cook}</div>
+                    <div className={styles.detail_name}>Servings:
+                        <p className={styles.detail_info}>
+                            {recipeInfo.servings}
+                        </p>
+                    </div>
+                    <div className={styles.detail_name}>Prep:
+                        <p className={styles.detail_info}>
+                            {recipeInfo.prep}
+                        </p>
+                    </div>
+                    <div className={styles.detail_name}>Cook: 
+                        <p className={styles.detail_info}>
+                            {recipeInfo.cook}
+                        </p>
+                    </div>
                 </div>
             </div>
       

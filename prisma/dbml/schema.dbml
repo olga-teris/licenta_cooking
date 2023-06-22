@@ -1,0 +1,111 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table user {
+  id Int [pk, increment]
+  name String [not null]
+  email String [not null]
+  password String [not null]
+  fridge fridge [not null]
+  preferences preferences [not null]
+  contraindications contraindications [not null]
+}
+
+Table ingredient {
+  id Int [pk, increment]
+  name String [not null]
+  fridge fridge [not null]
+  recipeIng recipeIng [not null]
+  preferences preferences [not null]
+  contraindications contraindications [not null]
+}
+
+Table fridge {
+  users user [not null]
+  userId Int [not null]
+  ingredients ingredient [not null]
+  ingredientId Int [not null]
+
+  indexes {
+    (userId, ingredientId) [unique]
+  }
+}
+
+Table recipe {
+  id Int [pk, increment]
+  name String [not null]
+  recipeIng recipeIng [not null]
+  recipeCat recipeCat [not null]
+}
+
+Table category {
+  id Int [pk, increment]
+  name String [not null]
+  recipeCat recipeCat [not null]
+}
+
+Table recipeIng {
+  recipeId Int [not null]
+  ingredientId Int [not null]
+  recipes recipe [not null]
+  ingredients ingredient [not null]
+
+  indexes {
+    (recipeId, ingredientId) [unique]
+  }
+}
+
+Table recipeCat {
+  recipeId Int [not null]
+  categoryId Int [not null]
+  recipes recipe [not null]
+  categories category [not null]
+
+  indexes {
+    (recipeId, categoryId) [unique]
+  }
+}
+
+Table preferences {
+  users user [not null]
+  userId Int [not null]
+  ingredients ingredient [not null]
+  ingredientId Int [not null]
+  liked Boolean [not null]
+
+  indexes {
+    (userId, ingredientId) [unique]
+  }
+}
+
+Table contraindications {
+  users user [not null]
+  userId Int [not null]
+  ingredients ingredient [not null]
+  ingredientId Int [not null]
+
+  indexes {
+    (userId, ingredientId) [unique]
+  }
+}
+
+Ref: fridge.userId > user.id
+
+Ref: fridge.ingredientId > ingredient.id
+
+Ref: recipeIng.recipeId > recipe.id
+
+Ref: recipeIng.ingredientId > ingredient.id
+
+Ref: recipeCat.recipeId > recipe.id
+
+Ref: recipeCat.categoryId > category.id
+
+Ref: preferences.userId > user.id
+
+Ref: preferences.ingredientId > ingredient.id
+
+Ref: contraindications.userId > user.id
+
+Ref: contraindications.ingredientId > ingredient.id
