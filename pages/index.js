@@ -28,7 +28,7 @@ export default function Home(props) {
 function Guest(){
   return (
     <div className={styles.homepage}>
-
+      <title>Home</title>
     <div className={styles.explore_container}> 
       <div className={styles.left1}>
         Explore our recent recipes
@@ -80,7 +80,7 @@ function Guest(){
 function User({ session, handleSignOut }){
   return(
     <div className={styles.homepage}>
-
+      <title>Home</title>
       <div className={styles.explore_container}> 
         <div className={styles.left1}>
           Explore our recent recipes
